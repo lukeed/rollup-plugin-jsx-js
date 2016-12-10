@@ -1,0 +1,32 @@
+{
+  "name": "rollup-plugin-jsx-js",
+  "version": "0.0.0",
+  "description": "JSX.js wrapper for Rollup",
+  "license": "MIT",
+  "repository": "lukeed/rollup-plugin-jsx-js",
+  "author": {
+    "name": "Luke Edwards",
+    "email": "luke.edwards05@gmail.com",
+    "url": "lukeed.com"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    ""
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "xo": "^0.16.0"
+  },
+  "xo": {
+    "esnext": true
+  }
+}
