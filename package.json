@@ -19,9 +19,16 @@
     "index.js"
   ],
   "keywords": [
-    ""
+    "rollup-plugin",
+    "jsx.js",
+    "preact",
+    "react",
+    "jsx",
+    "dio"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "jsx.js": "^0.2.5"
+  },
   "devDependencies": {
     "ava": "^0.15.2",
     "xo": "^0.16.0"
