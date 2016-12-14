@@ -28,10 +28,26 @@ export default {
 
 ## Options
 
-In addition to [`precise`](#precise), you may define [custom mappings](https://github.com/thysultan/jsx.js#api) for fuller control of your compiled JSX output.
+#### precise
+
+Type: `boolean`<br>
+Default: `false`
+
+Should the source-mapping be precise?
+
+Precise mappings map every single character, which allows your devtools to trace & pinpoint everything's exact location.
+With less precise mappings, devtools may only be able to identify the correct line. However, they're quicker to generate and less bulky.
+
+
+## Advanced Options
+
+In addition to [`precise`](#precise), you may want to define [custom mappings](https://github.com/thysultan/jsx.js#api) for fuller control of your compiled JSX output.
+
+The following functions are available to you: `text`, `element`, `component`, `props`, and `stringify`.
 
 ```js
 // rollup.config.js
+import jsx from 'rollup-plugin-jsx-js';
 
 export default {
   entry: '...',
@@ -47,16 +63,6 @@ export default {
   ]
 }
 ```
-
-#### precise
-
-Type: `boolean`<br>
-Default: `false`
-
-Should the source-mapping be precise?
-
-Precise mappings map every single character, which allows your devtools to trace & pinpoint everything's exact location.
-With less precise mappings, devtools may only be able to identify the correct line. However, they're quicker to generate and less bulky.
 
 
 ## License
