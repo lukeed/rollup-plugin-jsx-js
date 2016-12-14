@@ -1,43 +1,62 @@
 # rollup-plugin-jsx-js [![Build Status](https://travis-ci.org/lukeed/rollup-plugin-jsx-js.svg?branch=master)](https://travis-ci.org/lukeed/rollup-plugin-jsx-js)
 
-> JSX.js wrapper for Rollup
+> [JSX.js](https://github.com/thysultan/jsx.js) wrapper for Rollup
 
 
 ## Install
 
 ```
-$ npm install --save rollup-plugin-jsx-js
+$ npm install --save-dev rollup-plugin-jsx-js
 ```
 
 
 ## Usage
 
 ```js
-const rollupPluginJsxJs = require('rollup-plugin-jsx-js');
+import jsx from 'rollup-plugin-jsx-js';
 
-rollupPluginJsxJs('unicorns');
-//=> 'unicorns & rainbows'
+export default {
+  dest: 'build/app.js',
+  entry: 'src/index.js',
+  sourceMap: true,
+  plugins: [
+    jsx({precise: true})
+  ]
+};
 ```
 
 
-## API
+## Options
 
-### rollupPluginJsxJs(input, [options])
+In addition to [`precise`](#precise), you may define [custom mappings](https://github.com/thysultan/jsx.js#api) for fuller control of your compiled JSX output.
 
-#### input
+```js
+// rollup.config.js
 
-Type: `string`
+export default {
+  entry: '...',
+  plugins: [
+    jsx({
+      precise: true,
+      text: children => ({...}),
+      element: (type, props, children) => (...),
+      component: (type, props, children) => ({...}),
+      props: (key, value, props, node) => ({...}),
+      stringify: (type, props, children, nodeType) => ({...})
+    })
+  ]
+}
+```
 
-Lorem ipsum.
-
-#### options
-
-##### foo
+#### precise
 
 Type: `boolean`<br>
 Default: `false`
 
-Lorem ipsum.
+Should the source-mapping be precise?
+
+Precise mappings map every single character, which allows your devtools to trace & pinpoint everything's exact location.
+With less precise mappings, devtools may only be able to identify the correct line. However, they're quicker to generate and less bulky.
 
 
 ## License
