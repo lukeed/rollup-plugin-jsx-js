@@ -1,11 +1,11 @@
-const {join} = require('path');
-const {readFileSync} = require('fs');
-const {rollup} = require('rollup');
-const {test} = require('tape');
+const join = require('path').join;
+const readSync = require('fs').readFileSync;
+const rollup = require('rollup').rollup;
+const test = require('tape').test;
 
 const jsx = require('../');
 
-const read = f => readFileSync(f, 'utf8');
+const read = f => readSync(f, 'utf8');
 
 const fix = join(__dirname, 'fixtures');
 const foo = read(join(fix, 'foo.js'));
