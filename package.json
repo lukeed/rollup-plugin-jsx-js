@@ -27,7 +27,8 @@
     "dio"
   ],
   "dependencies": {
-    "jsx.js": "^0.2.5"
+    "jsx.js": "^0.2.5",
+    "rollup-pluginutils": "^1.5.2"
   },
   "devDependencies": {
     "ava": "^0.15.2",
