@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-jsx-js",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "JSX.js wrapper for Rollup",
   "license": "MIT",
   "repository": "lukeed/rollup-plugin-jsx-js",
