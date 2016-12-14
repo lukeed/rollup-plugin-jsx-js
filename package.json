@@ -13,7 +13,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "xo && ava"
+    "test": "xo && tape test | tap-spec"
   },
   "files": [
     "index.js"
@@ -32,7 +32,9 @@
     "rollup-pluginutils": "^1.5.2"
   },
   "devDependencies": {
-    "ava": "^0.15.2",
+    "rollup": "^0.37.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3",
     "xo": "^0.16.0"
   },
   "xo": {
